@@ -8,7 +8,8 @@ public class Length {
 	private final LengthUnit unit;
 
 	public enum LengthUnit {
-		FEET(1.0), INCHES(1.0 / 12.0);
+
+		FEET(1.0), INCHES(1.0 / 12.0), YARDS(3.0), CENTIMETERS(0.0328084);
 
 		private final double toFeetFactor;
 
@@ -23,7 +24,7 @@ public class Length {
 
 	public Length(double value, LengthUnit unit) {
 		if (unit == null) {
-			throw new IllegalArgumentException("unit not null");
+			throw new IllegalArgumentException("Unit cannot be null");
 		}
 		this.value = value;
 		this.unit = unit;
