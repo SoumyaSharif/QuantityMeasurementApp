@@ -34,6 +34,23 @@ public class Length {
 		return unit.toFeet(value);
 	}
 
+	public static double convert(double value, LengthUnit source, LengthUnit target) {
+
+		if (!Double.isFinite(value)) {
+			throw new IllegalArgumentException("Value is finite");
+		}
+
+		if (source == null || target == null) {
+			throw new IllegalArgumentException("not null unit");
+		}
+
+		double valueInFeet = source.toFeet(value);
+
+		double result = valueInFeet / target.toFeet(1.0);
+
+		return result;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 

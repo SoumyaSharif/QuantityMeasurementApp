@@ -6,7 +6,8 @@ public class QuantityMeasurementApp {
 		return l1.equals(l2);
 	}
 
-	public static boolean demonstrateLengthComparison(double value1, Length.LengthUnit unit1, double value2,Length.LengthUnit unit2) {
+	public static boolean demonstrateLengthComparison(double value1, Length.LengthUnit unit1, double value2,
+			Length.LengthUnit unit2) {
 
 		Length l1 = new Length(value1, unit1);
 		Length l2 = new Length(value2, unit2);
@@ -14,6 +15,15 @@ public class QuantityMeasurementApp {
 		boolean result = l1.equals(l2);
 
 		System.out.println("lengths are equal : " + result);
+		return result;
+	}
+
+	public static double demonstrateLengthConversion(double value, Length.LengthUnit from, Length.LengthUnit to) {
+
+		double result = Length.convert(value, from, to);
+
+		System.out.println(value + " " + from + " = " + result + " " + to);
+
 		return result;
 	}
 
@@ -28,5 +38,11 @@ public class QuantityMeasurementApp {
 		demonstrateLengthComparison(1.0, Length.LengthUnit.CENTIMETERS, 0.393701, Length.LengthUnit.INCHES);
 
 		demonstrateLengthComparison(2.0, Length.LengthUnit.YARDS, 6.0, Length.LengthUnit.FEET);
+
+		demonstrateLengthConversion(1.0, Length.LengthUnit.FEET, Length.LengthUnit.INCHES);
+
+		demonstrateLengthConversion(3.0, Length.LengthUnit.YARDS, Length.LengthUnit.FEET);
+
+		demonstrateLengthConversion(2.54, Length.LengthUnit.CENTIMETERS, Length.LengthUnit.INCHES);
 	}
 }
