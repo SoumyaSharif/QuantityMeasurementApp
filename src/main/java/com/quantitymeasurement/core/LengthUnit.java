@@ -1,4 +1,4 @@
-package com.quantityMeasurementApp;
+package com.quantitymeasurement.core;
 
 public enum LengthUnit implements IMeasurable {
 
