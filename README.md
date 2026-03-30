@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📏 Quantity Measurement App
 
 ## 🏗 Building a Quantity Measurement System
@@ -137,3 +138,6 @@ A **clean, scalable, type-safe, extensible measurement framework** that:
 - Is easily extensible for future measurement systems
 
 ---
+=======
+# QuantityMeasurementApp
+>>>>>>> dev
