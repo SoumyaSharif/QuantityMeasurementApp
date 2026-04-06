@@ -1,5 +1,7 @@
 package com.app.quantitymeasurement.service;
 
+import java.util.Locale;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,28 +27,44 @@ public class QuantityMeasurementServiceImpl implements IQuantityMeasurementServi
 
     // Convert DTO -> Quantity object
     private Quantity<?> createQuantity(QuantityDTO dto) {
+        if (dto == null) {
+            throw new IllegalArgumentException("Quantity input is required");
+        }
+
+        if (dto.getUnit() == null || dto.getUnit().isBlank()) {
+            throw new IllegalArgumentException("Unit is required");
+        }
+
+        String normalizedUnit = dto.getUnit().trim().toUpperCase(Locale.ROOT);
 
         try {
-            LengthUnit unit = LengthUnit.valueOf(dto.getUnit());
+            LengthUnit unit = LengthUnit.valueOf(normalizedUnit);
             return new Quantity<>(dto.getValue(), unit);
         } catch (Exception ignored) {}
 
         try {
-            WeightUnit unit = WeightUnit.valueOf(dto.getUnit());
+            WeightUnit unit = WeightUnit.valueOf(normalizedUnit);
             return new Quantity<>(dto.getValue(), unit);
         } catch (Exception ignored) {}
 
         try {
-            VolumeUnit unit = VolumeUnit.valueOf(dto.getUnit());
+            VolumeUnit unit = VolumeUnit.valueOf(normalizedUnit);
             return new Quantity<>(dto.getValue(), unit);
         } catch (Exception ignored) {}
 
         try {
-            TemperatureUnit unit = TemperatureUnit.valueOf(dto.getUnit());
+            TemperatureUnit unit = TemperatureUnit.valueOf(normalizedUnit);
             return new Quantity<>(dto.getValue(), unit);
         } catch (Exception ignored) {}
 
-        throw new IllegalArgumentException("Unsupported Unit: " + dto.getUnit());
+        throw new IllegalArgumentException("Unsupported unit: " + dto.getUnit());
+    }
+
+    private String normalizeUnit(String unit) {
+        if (unit == null || unit.isBlank()) {
+            throw new IllegalArgumentException("Target unit is required");
+        }
+        return unit.trim().toUpperCase(Locale.ROOT);
     }
 
     // ================= COMPARE =================
@@ -68,10 +86,11 @@ public class QuantityMeasurementServiceImpl implements IQuantityMeasurementServi
         Quantity<?> quantity = createQuantity(input);
 
         Object unit = quantity.getUnit();
+        String normalizedTargetUnit = normalizeUnit(targetUnit);
 
         if (unit instanceof LengthUnit) {
 
-            LengthUnit target = LengthUnit.valueOf(targetUnit);
+            LengthUnit target = LengthUnit.valueOf(normalizedTargetUnit);
             Quantity<LengthUnit> result =
                     ((Quantity<LengthUnit>) quantity).convertTo(target);
 
@@ -80,7 +99,7 @@ public class QuantityMeasurementServiceImpl implements IQuantityMeasurementServi
 
         if (unit instanceof WeightUnit) {
 
-            WeightUnit target = WeightUnit.valueOf(targetUnit);
+            WeightUnit target = WeightUnit.valueOf(normalizedTargetUnit);
             Quantity<WeightUnit> result =
                     ((Quantity<WeightUnit>) quantity).convertTo(target);
 
@@ -89,7 +108,7 @@ public class QuantityMeasurementServiceImpl implements IQuantityMeasurementServi
 
         if (unit instanceof VolumeUnit) {
 
-            VolumeUnit target = VolumeUnit.valueOf(targetUnit);
+            VolumeUnit target = VolumeUnit.valueOf(normalizedTargetUnit);
             Quantity<VolumeUnit> result =
                     ((Quantity<VolumeUnit>) quantity).convertTo(target);
 
@@ -98,7 +117,7 @@ public class QuantityMeasurementServiceImpl implements IQuantityMeasurementServi
 
         if (unit instanceof TemperatureUnit) {
 
-            TemperatureUnit target = TemperatureUnit.valueOf(targetUnit);
+            TemperatureUnit target = TemperatureUnit.valueOf(normalizedTargetUnit);
             Quantity<TemperatureUnit> result =
                     ((Quantity<TemperatureUnit>) quantity).convertTo(target);
 

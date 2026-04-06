@@ -7,10 +7,13 @@ import com.app.quantitymeasurement.dto.QuantityDTO;
 import com.app.quantitymeasurement.dto.QuantityInputDTO;
 import com.app.quantitymeasurement.service.IQuantityMeasurementService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.Data;
 
 @RestController
 @RequestMapping("/api/v1/quantities")
+@Tag(name = "Quantity Measurement", description = "APIs for comparing, converting, and calculating quantities")
 @Data
 public class QuantityMeasurementController {
 
@@ -20,6 +23,7 @@ public class QuantityMeasurementController {
     // ================= COMPARE =================
 
     @PostMapping("/compare")
+    @Operation(summary = "Compare two quantities")
     public boolean compare(@RequestBody QuantityInputDTO input) {
 
         return service.compare(
@@ -31,6 +35,7 @@ public class QuantityMeasurementController {
     // ================= CONVERT =================
 
     @PostMapping("/convert/{targetUnit}")
+    @Operation(summary = "Convert a quantity to a target unit")
     public QuantityDTO convert(
             @RequestBody QuantityDTO input,
             @PathVariable String targetUnit) {
@@ -41,6 +46,7 @@ public class QuantityMeasurementController {
     // ================= ADD =================
 
     @PostMapping("/add")
+    @Operation(summary = "Add two quantities")
     public QuantityDTO add(@RequestBody QuantityInputDTO input) {
 
         return service.add(
@@ -52,6 +58,7 @@ public class QuantityMeasurementController {
     // ================= SUBTRACT =================
 
     @PostMapping("/subtract")
+    @Operation(summary = "Subtract one quantity from another")
     public QuantityDTO subtract(@RequestBody QuantityInputDTO input) {
 
         return service.subtract(
@@ -63,6 +70,7 @@ public class QuantityMeasurementController {
     // ================= DIVIDE =================
 
     @PostMapping("/divide")
+    @Operation(summary = "Divide one quantity by another")
     public double divide(@RequestBody QuantityInputDTO input) {
 
         return service.divide(
