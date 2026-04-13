@@ -1,0 +1,35 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.5)
+
+2026-04-09T14:16:56.283+05:30  INFO 21032 --- [api-gateway] [           main] com.qma.gateway.ApiGatewayApplication    : Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 17.0.4.1 with PID 21032 (C:\Users\soumy\OneDrive\Desktop\Project_Workspace_QuantityMeasurement\QuantityMeasurementApp\api-gateway\target\api-gateway-0.0.1-SNAPSHOT.jar started by soumy in C:\Users\soumy\OneDrive\Desktop\Project_Workspace_QuantityMeasurement\QuantityMeasurementApp\api-gateway)
+2026-04-09T14:16:56.297+05:30  INFO 21032 --- [api-gateway] [           main] com.qma.gateway.ApiGatewayApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T14:16:56.298+05:30 DEBUG 21032 --- [api-gateway] [           main] o.s.boot.SpringApplication               : Loading source class com.qma.gateway.ApiGatewayApplication
+2026-04-09T14:16:56.388+05:30 DEBUG 21032 --- [api-gateway] [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@2fc0cc3
+2026-04-09T14:16:58.306+05:30  INFO 21032 --- [api-gateway] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b9b975b9-00ef-3586-846a-a68346c2982a
+2026-04-09T14:16:58.813+05:30 DEBUG 21032 --- [api-gateway] [           main] o.s.b.t.s.TomcatServletWebServerFactory  : Code archive: C:\Users\soumy\OneDrive\Desktop\Project_Workspace_QuantityMeasurement\QuantityMeasurementApp\api-gateway\target\api-gateway-0.0.1-SNAPSHOT.jar
+2026-04-09T14:16:58.815+05:30 DEBUG 21032 --- [api-gateway] [           main] o.s.b.t.s.TomcatServletWebServerFactory  : Code archive: C:\Users\soumy\OneDrive\Desktop\Project_Workspace_QuantityMeasurement\QuantityMeasurementApp\api-gateway\target\api-gateway-0.0.1-SNAPSHOT.jar
+2026-04-09T14:16:58.816+05:30 DEBUG 21032 --- [api-gateway] [           main] o.s.b.t.s.TomcatServletWebServerFactory  : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2026-04-09T14:16:58.870+05:30  INFO 21032 --- [api-gateway] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-09T14:16:58.901+05:30  INFO 21032 --- [api-gateway] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T14:16:58.901+05:30  INFO 21032 --- [api-gateway] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T14:16:58.957+05:30 DEBUG 21032 --- [api-gateway] [           main] b.w.c.s.WebApplicationContextInitializer : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-04-09T14:16:58.963+05:30  INFO 21032 --- [api-gateway] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2570 ms
+2026-04-09T14:16:59.500+05:30 DEBUG 21032 --- [api-gateway] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: webMvcObservationFilter urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, formFilter urls=[/*] order=9901, weightCalculatorFilter urls=[/*] order=10001
+2026-04-09T14:16:59.501+05:30 DEBUG 21032 --- [api-gateway] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2026-04-09T14:16:59.542+05:30 DEBUG 21032 --- [api-gateway] [           main] o.s.b.s.f.OrderedRequestContextFilter    : Filter 'requestContextFilter' configured for use
+2026-04-09T14:16:59.548+05:30 DEBUG 21032 --- [api-gateway] [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-04-09T14:16:59.549+05:30 DEBUG 21032 --- [api-gateway] [           main] o.s.b.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2026-04-09T14:16:59.550+05:30 DEBUG 21032 --- [api-gateway] [           main] o.s.b.s.filter.OrderedFormContentFilter  : Filter 'formContentFilter' configured for use
+2026-04-09T14:16:59.832+05:30 DEBUG 21032 --- [api-gateway] [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.qma.gateway'. Automatic @Repository and @Entity scanning is enabled.
+2026-04-09T14:16:59.999+05:30 DEBUG 21032 --- [api-gateway] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2026-04-09T14:17:00.053+05:30 DEBUG 21032 --- [api-gateway] [           main] o.s.w.s.f.support.RouterFunctionMapping  : 1 RouterFunction(s) in 'routerFunctionMapping'
+2026-04-09T14:17:00.092+05:30 DEBUG 21032 --- [api-gateway] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-04-09T14:17:00.405+05:30 DEBUG 21032 --- [api-gateway] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-04-09T14:17:00.493+05:30 DEBUG 21032 --- [api-gateway] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice

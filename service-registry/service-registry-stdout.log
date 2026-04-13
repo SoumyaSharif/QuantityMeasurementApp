@@ -1,0 +1,37 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.5)
+
+2026-04-09T14:14:05.070+05:30  INFO 812 --- [service-registry] [           main] c.q.registry.ServiceRegistryApplication  : Starting ServiceRegistryApplication v0.0.1-SNAPSHOT using Java 17.0.4.1 with PID 812 (C:\Users\soumy\OneDrive\Desktop\Project_Workspace_QuantityMeasurement\QuantityMeasurementApp\service-registry\target\service-registry-0.0.1-SNAPSHOT.jar started by soumy in C:\Users\soumy\OneDrive\Desktop\Project_Workspace_QuantityMeasurement\QuantityMeasurementApp\service-registry)
+2026-04-09T14:14:05.080+05:30  INFO 812 --- [service-registry] [           main] c.q.registry.ServiceRegistryApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T14:14:05.081+05:30 DEBUG 812 --- [service-registry] [           main] o.s.boot.SpringApplication               : Loading source class com.qma.registry.ServiceRegistryApplication
+2026-04-09T14:14:05.186+05:30 DEBUG 812 --- [service-registry] [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@25b2cfcb
+2026-04-09T14:14:07.054+05:30  INFO 812 --- [service-registry] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ee957f25-f869-38a6-9dbc-bda9bb41dd66
+2026-04-09T14:14:07.613+05:30 DEBUG 812 --- [service-registry] [           main] o.s.b.t.s.TomcatServletWebServerFactory  : Code archive: C:\Users\soumy\OneDrive\Desktop\Project_Workspace_QuantityMeasurement\QuantityMeasurementApp\service-registry\target\service-registry-0.0.1-SNAPSHOT.jar
+2026-04-09T14:14:07.614+05:30 DEBUG 812 --- [service-registry] [           main] o.s.b.t.s.TomcatServletWebServerFactory  : Code archive: C:\Users\soumy\OneDrive\Desktop\Project_Workspace_QuantityMeasurement\QuantityMeasurementApp\service-registry\target\service-registry-0.0.1-SNAPSHOT.jar
+2026-04-09T14:14:07.617+05:30 DEBUG 812 --- [service-registry] [           main] o.s.b.t.s.TomcatServletWebServerFactory  : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2026-04-09T14:14:07.668+05:30  INFO 812 --- [service-registry] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8761 (http)
+2026-04-09T14:14:07.696+05:30  INFO 812 --- [service-registry] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T14:14:07.697+05:30  INFO 812 --- [service-registry] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T14:14:07.758+05:30 DEBUG 812 --- [service-registry] [           main] b.w.c.s.WebApplicationContextInitializer : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-04-09T14:14:07.761+05:30  INFO 812 --- [service-registry] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2573 ms
+2026-04-09T14:14:08.606+05:30 DEBUG 812 --- [service-registry] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: webMvcObservationFilter urls=[/*] order=-2147483647, eurekaVersionFilterRegistration urls=[/eureka/*] order=0, jerseyFilterRegistration urls=[/eureka/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-04-09T14:14:08.607+05:30 DEBUG 812 --- [service-registry] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2026-04-09T14:14:08.657+05:30 DEBUG 812 --- [service-registry] [           main] o.s.b.s.f.OrderedRequestContextFilter    : Filter 'requestContextFilter' configured for use
+2026-04-09T14:14:08.664+05:30 DEBUG 812 --- [service-registry] [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-04-09T14:14:08.668+05:30 DEBUG 812 --- [service-registry] [           main] o.s.b.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2026-04-09T14:14:09.752+05:30  INFO 812 --- [service-registry] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-04-09T14:14:09.753+05:30  INFO 812 --- [service-registry] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-04-09T14:14:10.033+05:30  INFO 812 --- [service-registry] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-04-09T14:14:10.034+05:30  INFO 812 --- [service-registry] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-04-09T14:14:10.193+05:30 DEBUG 812 --- [service-registry] [           main] o.s.b.s.filter.OrderedFormContentFilter  : Filter 'formContentFilter' configured for use
+2026-04-09T14:14:10.344+05:30  INFO 812 --- [service-registry] [           main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-04-09T14:14:10.362+05:30 DEBUG 812 --- [service-registry] [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.qma.registry'. Automatic @Repository and @Entity scanning is enabled.
+2026-04-09T14:14:10.564+05:30 DEBUG 812 --- [service-registry] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2026-04-09T14:14:10.600+05:30 DEBUG 812 --- [service-registry] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
